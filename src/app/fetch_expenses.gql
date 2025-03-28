@@ -1,0 +1,9 @@
+query fetchExpenses{
+    expenses {
+        id
+        title
+        description
+        amount
+        date
+    }
+}
