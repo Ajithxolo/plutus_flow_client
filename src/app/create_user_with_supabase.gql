@@ -1,0 +1,11 @@
+mutation CreateUserWithSupabase($token: String!) {
+  createUserWithSupabase(input: {token: $token}) {
+    user {
+      id
+      email
+      name
+      supabaseMetadata
+    }
+    errors
+  }
+}
