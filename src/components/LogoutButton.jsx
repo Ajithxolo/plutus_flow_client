@@ -1,6 +1,6 @@
 'use client'
-import React, {useState, useEffect} from "react";
-import { Box, Button, Alert } from "@chakra-ui/react";
+import React, {useState} from "react";
+import { Alert, MenuItem, Link as ChakraLink } from "@chakra-ui/react";
 import supabase from "@/lib/supabaseClient";
 import { useRouter } from "next/navigation";
 
@@ -21,13 +21,13 @@ const LogoutButton = () => {
   }
 
   return (
-    <Box>
+    <MenuItem>
       {error && <Alert status="error" title={error} />}
       {message && <Alert status="success" title={message} />}
-      <Button variant="solid" colorScheme="red" onClick={handleLogout}>
+      <ChakraLink onClick={handleLogout}>
         Logout
-      </Button>
-    </Box>
+      </ChakraLink>
+    </MenuItem>
   );
 };
 

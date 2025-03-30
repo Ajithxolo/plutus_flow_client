@@ -2,15 +2,14 @@
 import EmailConfirmationHandler from "@/components/EmailConfirmationHandler";
 import ExpensesList from "@/components/ExpensesList";
 import { Box } from "@chakra-ui/react";
-import Image from "next/image";
-import LogoutButton from "@/components/LogoutButton";
 import AuthGuard from "@/components/AuthGuard";
+import TopNavBar from "@/components/TopNavBar";
 
 export default function Home() {
   return (
     <AuthGuard>
+    <TopNavBar />
     <Box>
-      <LogoutButton />
       <EmailConfirmationHandler />
       <ExpensesList />
     </Box>
