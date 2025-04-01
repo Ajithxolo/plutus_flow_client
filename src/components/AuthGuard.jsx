@@ -16,7 +16,6 @@ const AuthGuard = ({ children }) => {
         setUser(user);
       }
     };
-
     checkUser();
   }, [router]);
 
